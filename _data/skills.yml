@@ -1,28 +1,19 @@
 -   id: javascript
-    descr: javascript    
-    xp: 6
+    name: javascript
+    descr: This is a test description for a skill 0
 -   id: css
-    descr: css
-    color: teal
-    xp: 7
--   id: c#
-    descr: c#    
-    xp: 3
--   id: angular
-    descr: angularjs    
-    xp: 8
--   id: java
-    descr: java    
-    xp: 5
--   id: sass
-    descr: sass    
-    xp: 4
--   id: jquery
-    descr: jquery    
-    xp: 3
--   id: node.js
-    descr: node.js 
-    xp: 2
--   id: php
-    descr: php
-    xp: 4
+    name: css
+    descr: This is a test description for a skill 1
+-   id: c
+    name: c
+    descr: This is a test description for a skill 2
+-   id: apples
+    name: akidid
+    descr: This is a test description for a skill 3
+-   id: bagels
+    name: bjdjd
+    descr: This is a test description for a skill 4
+-   id: fraps
+    name: fdjdj
+    descr: This is a test description for a skill 5
+
