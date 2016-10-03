@@ -9,8 +9,14 @@
     position: relative;
 }
 
+.not-essential{
+    @include media-query($on-laptop) {
+        display: none;
+    }
+}
+
 .title{
-    padding: $spacing-unit * 3;
+    padding: $spacing-unit * 2;
     float: left;
     background: $red-color;
 }
@@ -18,7 +24,7 @@
 .site-title {
     font-size: 16px;
     font-weight: 300;
-    line-height: 56px;
+    line-height: 20px;
     letter-spacing: -1px;
     margin-bottom: 0;
     float: left;
@@ -26,6 +32,22 @@
     &,
     &:visited {
         color: $text-color;
+    }
+}
+
+.section-header{    
+    overflow: hidden;
+    margin-top: 20px;
+    
+    .section-header-body{
+        margin-left: $block-padding;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 30px;
+        letter-spacing: -1px;
+        margin-bottom: 0;
+        float: left;
     }
 }
 
@@ -131,7 +153,7 @@
 
 .col {
     float: left;
-    margin-bottom: $spacing-unit / 4;
+    margin-bottom: $spacing-unit / 2;
     padding-left: $spacing-unit / 2;
 }
 
@@ -277,12 +299,19 @@
     color: $grey-color;
 }
 
+.post-link-responder {
+    background: $grey-color;
+    color: $white-color;
+}
+
+.post-link-box:hover .post-link-responder {
+    background: $grey-color-dark;
+}
+
 .post-link {
     display: block;
     font-size: 24px;
 }
-
-
 
 /**
  * Posts

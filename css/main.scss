@@ -9,10 +9,10 @@
 $base-font-family: "Helvetica Neue";
 $base-font-size:   16px;
 $base-font-weight: 200;
-$small-font-size:  $base-font-size * 0.875;
+$small-font-size:  $base-font-size * 0.9;
 $base-line-height: 1.5;
 
-$spacing-unit:     4px;
+$spacing-unit:     8px;
 $height-unit:     140px;
 $block-padding:    30px;
 
@@ -22,12 +22,11 @@ $brand-color:      #2a7ae2;
 
 $border-radius: 7px;
 
-
 $white-color: #fefefe;
 $glass-color: lighten($background-color, 2%);
 $grey-color:       #546E7A;
 $grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+$grey-color-dark:  darken($grey-color, 15%);
 $teal-color: #26A69A;
 $green-color: #4CAF50;
 $lime-color: #C6FF00;

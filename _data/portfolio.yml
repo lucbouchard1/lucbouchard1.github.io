@@ -1,11 +1,15 @@
 height: 1
 
 entries:
--   id: 1
-    title: Poly Sat 
+-   page: education
+    title: Education
+    img: 2.png
+    pic_pos: center top
+-   page: polysat
+    title: PolySat 
     img: 1.jpg
-    width: 8
--   id: 2
-    title: Cal Poly
-    img: 2.jpg
-    width: 4
+    pic_pos: center
+-   page: fullpower
+    title: Fullpower
+    img: fullpower.jpg
+    pic_pos: center

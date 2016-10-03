@@ -1,7 +1,7 @@
 <header class="site-header margin-bot-big">
 
   <div class="wrapper">
-
+    {% if page.layout != "default" %}
     <div class="title">
         <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
     </div>
@@ -23,6 +23,7 @@
         {% endfor %}
       </div>
     </nav>
+    {% endif %}
 
   </div>
 

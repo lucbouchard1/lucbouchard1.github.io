@@ -1,19 +1,77 @@
--   id: javascript
-    name: javascript
-    descr: This is a test description for a skill 0
--   id: css
-    name: css
-    descr: This is a test description for a skill 1
 -   id: c
-    name: c
-    descr: This is a test description for a skill 2
--   id: apples
-    name: akidid
-    descr: This is a test description for a skill 3
--   id: bagels
-    name: bjdjd
-    descr: This is a test description for a skill 4
--   id: fraps
-    name: fdjdj
-    descr: This is a test description for a skill 5
+    name: C
+    descr: C is the language used for all PolySat programs. I use it more than any other 
+            language, and I've become quite comfortable with it.
 
+-   id: java
+    name: Java
+    descr: I've used Java in several of my classes for several projects. 
+            I'm expericned with the launguage and the concepts of Object Orientation.
+
+-   id: cpp
+    name: C++
+    descr: I haven't logged as many hours with C++ as I have with C and Java; however, 
+            I am familiar with the language and the concepts of Object Orientation.
+
+-   id: git
+    name: Git
+    descr: Git is my favorite version control system. 
+            In addition to it being an essential tool for PolySat, 
+            I use git for all my school projects.
+
+-   id: svn
+    name: SVN
+    descr: PolySat uses Subversion for all documentation. 
+            I have a good amount of experince with it.
+
+-   id: python
+    name: Python
+    descr: I use Python for most of my scripting tasks.
+            It has become a very powerful tool for working on the satellites, 
+            and I very much enjoy the language and its design.
+
+-   id: bash
+    name: Bash
+    descr: All my programming is done in a bash environment with vim as my text editor. 
+            I am very comfortable working in a shell and writing bash scripts.
+
+-   id: vim
+    name: Vim
+    descr: Vim is my text editor of choice. I use it on a daily basis.
+
+-   id: gdb
+    name: GDB
+    descr: GDB is an essential tool for debugging C programs on PolySat satellites.
+            I am very comfortable with it.
+
+-   id: valgrind
+    name: Valgrind
+    descr: GDB is an essential tool for Polysat as memory leaks can be detrimental to spacecraft.
+
+-   id: make
+    name: Make
+    descr: Makefiles are used extensively in PolySat for generating flight software images.
+
+-   id: html
+    name: HTML
+    descr: I enjoy web development as a hobby. I am not an expert; however, 
+            I am comfortable putting together a simple web page like this one.
+
+-   id: css
+    name: CSS
+    descr: I enjoy web development as a hobby. I am not an expert; however, 
+            I am comfortable putting together a simple web page like this one.
+
+-   id: javascript
+    name: Javascript
+    descr: I enjoy web development as a hobby. I am not an expert; however, 
+            I am comfortable putting together a simple web page like this one.
+
+-   id: buildroot
+    name: Buildroot
+    descr: Buildroot is the tool PolySat uses for generating an embedded Linux image.
+            It relies on GNU Make.
+
+-   id: microsoft
+    name: Office
+    descr: I've used Microsoft Office since I was young, and I'm very comfortable with Word, Excel, and PowerPoint.

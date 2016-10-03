@@ -3,10 +3,9 @@
  */
 
 
-.block{    
+.block{
     overflow: hidden;
-    margin: 2px;
-    min-height: $height-unit; 
+    min-height: $height-unit;
     
     .block-body{
         margin: $block-padding;
