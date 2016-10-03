@@ -13,7 +13,7 @@ layout: default
       <div class="block glass height-2">
         <div class="block-body">
             <h1>Luc Bouchard</h1>
-              <p class="grey-text">Hello! Thanks for looking at my portfolio. I am an undergrad at California Polytechnic State University, San Luis Obispo, and I'm pursuing a B.S. in physics with a minor in computer science. Although I am a physics major, I have a passion for engineering, and I spend a large portion of my time working on satellites for <a href="http://polysat.calpoly.edu">PolySat</a>, the Cal Poly CubeSat program. My interests lie primarily in space, programming, math, and physics. Feel free to take a look at my <a href="assets/LucBouchardResume.pdf"><u>resume</u></a>, request my <a href="http://www.google.com/recaptcha/mailhide/d?k=01tuL6YxSdUrusJKCfHbt5GQ==&c=5t8u_5w5vsi_Pw24wVqrmSn-fVz8cmHuCvH0-flWk7M="><u> email</u></a>, or look at my <a href="https://github.com/lucbouchard1"><u>github</u></a>.</p>
+              <p class="grey-text">Hello! Thanks for looking at my portfolio. I am an undergrad at California Polytechnic State University, San Luis Obispo, and I'm pursuing a B.S. in physics with a minor in computer science. Although I am a physics major, I have a passion for engineering, and I spend a large portion of my time working on satellites for <a href="http://polysat.calpoly.edu">PolySat</a>, the Cal Poly CubeSat program. My interests lie primarily in space, programming, math, and physics. Feel free to take a look at my <a href="assets/LucBouchardResume.pdf"><u>resume</u></a>, request my <a href="http://www.google.com/recaptcha/mailhide/d?k=01tuL6YxSdUrusJKCfHbt5GQ==&c=5t8u_5w5vsi_Pw24wVqrmSn-fVz8cmHuCvH0-flWk7M="><u> email</u></a>, or check out my <a href="https://github.com/lucbouchard1"><u>github</u></a>.</p>
               
         </div>
       </div>
@@ -32,19 +32,19 @@ layout: default
         <div class="not-essential col col-9 height-{{site.data.portfolio.height}}" style="margin: 0; background-image:url(assets/{{port.img}}); background-position: {{ port.pic_pos }};">
         </div>
         <div class="col col-3 grey post-link-responder" style="margin: 0">
-          <div class="block-body center">              
+          <div class="block-body center">
             <h2>
               {{ port.title }}
-            </h2>
+            </h2>           
           </div>
         </div>
         {% else %}
         {% assign value = 0 %}
         <div class="col col-3 post-link-responder" style="margin: 0">
-          <div class="block-body center">              
-            <h2>
-              {{ port.title }}
-            </h2>
+          <div class="block-body center">
+              <h2 style="text-align: center;">
+                {{ port.title }}
+              </h2>          
           </div>
         </div>
         <div class="not-essential col col-9 height-{{site.data.portfolio.height}}" style="margin: 0; background-image:url(assets/{{port.img}}); background-position: {{ port.pic_pos }};">
