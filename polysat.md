@@ -18,6 +18,10 @@ I am currently the software team lead for this program. PolySat's flight softwar
 
 <br>
 
+I spent the Summer of 2016 working full-time at PolySat. In that time I developed a lot as a programmer and completed several mission critical projects. 
+
+<br>
+
 Through this program, I've contributed to five CubeSats that are manifested and scheduled to launch next year. These are listed below:
 
 - <i>Ionsopheric Scintillation Explorer</i> (ISX). Collaboration with Stanford Research Institute.
