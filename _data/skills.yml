@@ -41,12 +41,12 @@
 
 -   id: gdb
     name: GDB
-    descr: Valgrind is an essential tool for debugging C programs on PolySat satellites.
+    descr: GDB is an essential tool for debugging C programs on PolySat satellites.
             I am very comfortable with it.
 
 -   id: valgrind
     name: Valgrind
-    descr: GDB is an essential tool for Polysat as memory leaks can be detrimental to spacecraft.
+    descr: Valgrind is an essential tool for Polysat as memory leaks can be detrimental to spacecraft.
 
 -   id: make
     name: Make
