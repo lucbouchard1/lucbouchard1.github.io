@@ -3,12 +3,14 @@ height: 1
 entries:
 -   page: education
     title: Education
-    img: 2.png
+    img: calpoly.png
     pic_pos: center top
+    
 -   page: polysat
     title: PolySat 
-    img: 1.jpg
+    img: ipex.jpg
     pic_pos: center
+
 -   page: fullpower
     title: Fullpower
     img: fullpower.jpg
