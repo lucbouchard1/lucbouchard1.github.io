@@ -16,6 +16,10 @@ I'm an currently an undergrad at Cal Poly pursuing a degree in physics with a mi
 
 <br>
 
+GPA: 3.9
+
+<br>
+
 *Relevant Coursework:*
 
 - CPE 101, 102, 103 - Intro Programming Series
