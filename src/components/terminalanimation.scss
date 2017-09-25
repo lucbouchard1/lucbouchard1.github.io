@@ -1,0 +1,10 @@
+@import '../style/variables.scss';
+
+.terminal-body {
+    width: 500px;
+    overflow-wrap: normal;
+    text-align: left;
+    color: $text-light;
+    font-size: 22px;
+    font-family: $code_font;
+}

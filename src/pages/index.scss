@@ -1,0 +1,37 @@
+@import '../style/variables.scss';
+
+.lb-header {
+    height: 500px;
+    padding: 50px;
+    background-color: $primary-color;
+    display: flex;
+}
+
+.lb-profile {
+    color: $text-light;
+    flex: 1;
+}
+
+.lb-desc {
+    color: $text-light;
+    flex: 1;
+}
+
+.lb-header-nav {
+    display: block;
+    height: 30%;
+    background-color: $primary-color-light;
+
+    a {
+        padding: 20px;
+        text-align: center;
+        display: inline-block;
+        width: 100px;
+        text-decoration: none;
+        color: #000000;
+    }
+}
+
+.lb-content {
+
+}
