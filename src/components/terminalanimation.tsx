@@ -8,8 +8,7 @@ extends React.Component<TerminalAnimation.IProps, TerminalAnimation.IState> {
     constructor(props: TerminalAnimation.IProps) {
         super(props);
         this.state = {
-            visibleLines: [],
-            currLine: null,
+            currLineIdx: -1,
             currCharIdx: 0,
         }
 
@@ -29,49 +28,42 @@ extends React.Component<TerminalAnimation.IProps, TerminalAnimation.IState> {
     }
 
     render() {
-        if (!this.state.currLine)
+        let lines = this.props.lines;
+        let lineIdx = this.state.currLineIdx;
+        let charIdx = this.state.currCharIdx;
+        let line = lines[lineIdx];
+
+        if (lineIdx < 0)
             return null;
-
-        let currLine = '';
-        if (this.state.currLine.isCommand) {
-            currLine += this.props.prompt;
-            currLine += this.state.currLine.content.slice(0, this.state.currCharIdx);
-        } else {
-            currLine = this.state.currLine.content;
-        }
-
+        
         return (
             <div className='terminal-body'>
+            <div className='terminal-content'>
                 {
-                    this.state.visibleLines.map((line, idx) => {
-                        let lineData = "";
-                        if (line.isCommand)
-                            lineData += this.props.prompt;
-                        lineData += line.content;
-
+                    lines.slice(0, lineIdx).map((l, idx) => {
                         return (
-                            <p key={idx}>{lineData}</p>
+                            <p key={idx}>{(l.prompt ? this.props.prompt : '') + l.content}<br /></p>
                         );
                     })
                 }
                 {
-                    <p>{currLine}</p>
+                    <p>{(line.prompt ? this.props.prompt : '') + line.content.slice(0, charIdx)}</p>
                 }
+            </div>
             </div>
         );
     }
 
     private _addChar() {
-        let currLine = this.state.currLine;
-        let visibleLines = this.state.visibleLines;
         let lines = this.props.lines;
+        let lineIdx = this.state.currLineIdx;
+        let charIdx = this.state.currCharIdx;
 
-        if (!currLine.isCommand ||
-            currLine.content.length == this.state.currCharIdx) {
+        if (charIdx == lines[lineIdx].content.length) {
             // Line has been printed out entirely. Setup next line.
             clearInterval(this._typeInterval);
             this._typeInterval = null;
-            this._lineTimeout = setTimeout(this._nextLine, this.props.linePause);
+            this._lineTimeout = setTimeout(this._nextLine, 0);
             return;
         }
 
@@ -82,22 +74,35 @@ extends React.Component<TerminalAnimation.IProps, TerminalAnimation.IState> {
 
     private _nextLine() {
         this._lineTimeout = null;
-        let currLine = this.state.currLine;
-        let visibleLines = this.state.visibleLines;
+        let currLineIdx = this.state.currLineIdx;
+        let nextIdx = currLineIdx + 1;
         let lines = this.props.lines;
         
         // Check if we're out of lines
-        if (lines.length == 0 || visibleLines.length == lines.length - 1)
+        if (nextIdx >= lines.length)
             return;
         
-        let newVisibleLines = currLine ? this.state.visibleLines.concat(currLine) : [];
-
         this.setState({
-            visibleLines: newVisibleLines,
-            currLine: lines[newVisibleLines.length],
+            currLineIdx: nextIdx,
             currCharIdx: 0
         });
-        this._typeInterval = setInterval(this._addChar, this.props.typeRate);
+
+        this._lineTimeout = setTimeout(() => {
+            if (lines[nextIdx].type) {
+                this.setState({
+                    currLineIdx: nextIdx,
+                    currCharIdx: 0
+                });
+                // 'Type' the values into the DOM
+                this._typeInterval = setInterval(this._addChar, this.props.typeRate);
+            } else {
+                this.setState({
+                    currLineIdx: nextIdx,
+                    currCharIdx: lines[nextIdx].content.length
+                });
+                this._lineTimeout = setTimeout(this._nextLine, 0);
+            }
+        }, lines[nextIdx].lineDelay);
     }
 
     private _typeInterval: NodeJS.Timer = null;;
@@ -109,22 +114,22 @@ namespace TerminalAnimation {
 
     export
     interface ILine {
-        isCommand: boolean;
+        type: boolean;
+        prompt: boolean;
+        lineDelay: number;
         content: string;
     }
 
     export
     interface IProps {
         typeRate: number;
-        linePause: number;
-        prompt: string;
         lines: ILine[];
+        prompt: string;
     }
 
     export
     interface IState {
-        visibleLines: ILine[];
-        currLine: ILine;
+        currLineIdx: number;
         currCharIdx: number;
     }
 }

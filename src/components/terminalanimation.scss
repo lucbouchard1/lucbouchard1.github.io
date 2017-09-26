@@ -1,10 +1,21 @@
 @import '../style/variables.scss';
 
 .terminal-body {
-    width: 500px;
+    border-radius: 20px;
+    height: 100%;
+    width: 90%;
+    padding: 0;
     overflow-wrap: normal;
     text-align: left;
+    background-color: $primary-color-dark;
     color: $text-light;
     font-size: 22px;
-    font-family: $code_font;
+
+    p {
+        font-family: $code_font;
+    }
+}
+
+.terminal-content {
+    padding: 10px;
 }
