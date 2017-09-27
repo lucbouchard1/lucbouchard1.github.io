@@ -1,4 +1,4 @@
-echo -n "Are you sure you want to deply? (y/n) "
+echo -n "Are you sure you want to deploy? (y/n) "
 read ANSWER
 
 if [ "$ANSWER" != "y" ]; then
@@ -7,6 +7,11 @@ if [ "$ANSWER" != "y" ]; then
 fi
 
 echo "Deploying..."
+
+if [ "$(git status -s)" != "" ]; then
+   echo "Uncommited changes in current directory! Quitting..."
+   exit 1
+fi
 
 git checkout dev || exit 1
 git branch -D master || exit 1
