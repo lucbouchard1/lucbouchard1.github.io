@@ -18,9 +18,9 @@ let Header: React.SFC<Header.IProps> = (props: Header.IProps) => {
             <div className='lb-right'>
                 <ul className='header-links'>
                     <li><a href='https://google.com'><i className="fa fa-file-text-o fa-4x" aria-hidden="true"></i></a></li>
-                    <li><a href='https://google.com'><i className="fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a></li>
-                    <li><a href='https://google.com'><i className="fa fa-github fa-4x" aria-hidden="true"></i></a></li>
-                    <li><a href='https://google.com'><i className="fa fa-envelope-o fa-4x" aria-hidden="true"></i></a></li>
+                    <li><a href='https://www.linkedin.com/in/luc-bouchard-551aaa132/'><i className="fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a></li>
+                    <li><a href='https://github.com/lucbouchard1'><i className="fa fa-github fa-4x" aria-hidden="true"></i></a></li>
+                    <li><a href='http://www.google.com/recaptcha/mailhide/d?k=01tuL6YxSdUrusJKCfHbt5GQ==&c=5t8u_5w5vsi_Pw24wVqrmSn-fVz8cmHuCvH0-flWk7M='><i className="fa fa-envelope-o fa-4x" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </header>

@@ -36,18 +36,21 @@ extends React.Component<TerminalAnimation.IProps, TerminalAnimation.IState> {
         if (lineIdx < 0)
             return null;
         
+        let prompt = line.prompt ? <span><span className='terminal-prompt'>{this.props.prompt}</span><span>$ </span></span> : null;
+
         return (
             <div className='terminal-body'>
             <div className='terminal-content'>
                 {
                     lines.slice(0, lineIdx).map((l, idx) => {
+                        let prompt = l.prompt ? <span><span className='terminal-prompt'>{this.props.prompt}</span><span>$ </span></span> : null;
                         return (
-                            <p key={idx}>{(l.prompt ? this.props.prompt : '') + l.content}<br /></p>
+                            <p key={idx}>{prompt}{l.content}<br /></p>
                         );
                     })
                 }
                 {
-                    <p>{(line.prompt ? this.props.prompt : '') + line.content.slice(0, charIdx)}</p>
+                    <p>{prompt}{line.content.slice(0, charIdx)}</p>
                 }
             </div>
             </div>

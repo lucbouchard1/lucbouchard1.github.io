@@ -1,21 +1,11 @@
 ---
-layout: post
-title:  "Fullpower"
-width:   3
-date:   2016-06-10 11:31:49 +0200
+title: Fullpower
 ---
 
 <br>
 
-*Project Overview:*
-
-- Wrote a Linux kernel module to handle pulse-per-second interrupts from a GPS
-- Made tke system time that the pulse occured available to userspace for clock synchronization
+When I was a junior in high school, I had the opportunity to do an internship with [Fullpower Technologies](https://www.fullpower.com/). Fullpower is a technology company that develops fitness and health products under the MotionX and Sleeptracker brands. During my first summer there, I worked on app testing and a web development project. The following summer, I went back to Fullpower and helped with a new sleep-tracking bed that recorded heart and breathing rate while a user slept. Since the timeline for that product was short, and stress was high at the company, I was given more responsibility. I wrote several data collection and test automation scripts in Python to expidite prototype development. I also wrote a program that started a web server on a BeagleBone Black and served diagnostic information. This made it easy for engineers to determine the state of a prototype by typing its IP address into a web browser.
 
 <br>
 
-I completed this project while working full-time at PolySat during the summer of 2016. We were adding a GPS to our flight computer, and we wanted to sycnhronize our clock to the GPS to take advantage of its extremely accurate timing. This was done by tying the GPS's pulse-per-second (PPS) line to one of our interrupts. To support this in software, I wrote a Linux kernel module that recorded the system time whenever an interrupt occured. The recorded time was then made available to userspace via the read system call. To learn how to do this, I read through the book <i>[Linux Device Drivers](http://shop.oreilly.com/product/9780596005900.do)</i> and utilized the PolySat faculty advisor.
-
-<br>
-
-I will admit that in terms of Linux modules, this is about as simple as it gets; however, it was a great learning experience and a window in to kernal development.
+Although I did gain great programming experince at Fullpower, I think the most important thing I gained was an understanding of how things work in industry. Having this before college became incredibly valuable, becuase as a part of [PolySat]({{site.baseurl}}/polysat), I regularly communicate with large companies that have certain expectations of professionalism for telecons, emails, and meetings.

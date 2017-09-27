@@ -6,10 +6,11 @@
     width: 90%;
     padding: 0;
     overflow-wrap: normal;
+    line-height: 25px;
     text-align: left;
     background-color: $primary-color-dark;
     color: $text-light;
-    font-size: 22px;
+    font-size: 25px;
 
     p {
         font-family: $code_font;
@@ -18,4 +19,9 @@
 
 .terminal-content {
     padding: 10px;
+}
+
+.terminal-prompt {
+    color: $secondary-color-light;
+    font-weight: bold;
 }

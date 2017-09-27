@@ -12,6 +12,7 @@ When I was in high school, I enjoyed doing hobbyist electronics projects. My fav
 Another one of my favorite projects was using a Raspberry Pi to allow remotely closing the garage door through a simple web interface. I also built a 3D printer as a high school senior project:
 
 <br>
-<div style="text-align: center;">
-	<img src="{{ site.baseurl }}/assets/printer.jpg">
+
+![3D Printer](./printer.jpg)
+
 </div>

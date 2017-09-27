@@ -8,10 +8,10 @@ const ProjectTemplate: React.SFC<any> = ({ data }) => {
     <div className='lb-project-body'>
       <Header {...{isFixed: true, height: 100}}/>
       <div style={{height: 100}}/>
+      <h1 className='lb-project-title'>
+        {post.frontmatter.title}
+      </h1>
       <div className='lb-project-content'>
-        <h1>
-          {post.frontmatter.title}
-        </h1>
         <div className='lb-project-html' dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </div>

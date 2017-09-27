@@ -9,10 +9,10 @@ let avatar = require('./images/avatar.jpg');
 let lines: TerminalAnimation.ILine[] = [
     {prompt: true, lineDelay: 700, type: true, content:  './print_desc.sh'},
     {prompt: false, lineDelay: 0, type: false, content: "Welcome to my portfolio! I am a physics ungerdraduate at California Polytechnic \
-     State University pursuing a programming career. Althoug I'm studying physics at Cal Poly, my interests lie strongly in engineering."},
+     State University pursuing a programming career. Althoug I'm studying physics at Cal Poly, my interests have always been closely linked with engineering."},
     {prompt: false, lineDelay: 0, type: false, content: ''},
     {prompt: true, lineDelay: 3000, type: true, content:  'cat interests.txt'},
-    {prompt: false, lineDelay: 0, type: false, content: 'Programming, Physics, Space, and anything cool!'},
+    {prompt: false, lineDelay: 0, type: false, content: 'Programming, physics, space, and other cool things!'},
     {prompt: true, lineDelay: 700, type: true, content:  ''},
     {prompt: true, lineDelay: 100, type: true, content:  ''},
     {prompt: true, lineDelay: 100, type: true, content:  'ls experience/'},
@@ -58,7 +58,7 @@ class Index extends React.Component<Index.IProps, Index.IState> {
                         <img src={avatar}></img>
                     </div>
                     <div className='lb-right' style={{opacity: this.state.introOpacity}}>
-                        <TerminalAnimation lines={lines} typeRate={70} prompt={'luc@lb-lap:~$ '}/>
+                        <TerminalAnimation lines={lines} typeRate={70} prompt={'luc@lb-lap:~'}/>
                     </div>
                 </div>
                 <div style={introStyle}></div>
