@@ -28,11 +28,12 @@ do
 done
 
 cp -r public/* .
+touch .nojekyll
+rm -fr public
 
 echo -n "Enter a deployment version: "
 read VERSION
 
 git add -A
 git commit -m "deploy-$VERSION"
-
 
