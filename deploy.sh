@@ -11,7 +11,8 @@ echo "Deploying..."
 git checkout dev || exit 1
 git branch -D master || exit 1
 git checkout -b master || exit 1
-npm run build
+npm install || exit 1
+npm run build || exit 1
 
 for f in $(ls)
 do
