@@ -21,7 +21,7 @@ npm run build || exit 1
 
 for f in $(ls)
 do
-   if ["$f" != "public"]; then
+   if [ "$f" != "public" ]; then
       echo $f
       rm -fr $f
    fi
