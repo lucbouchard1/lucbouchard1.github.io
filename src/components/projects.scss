@@ -1,0 +1,70 @@
+@import '../style/variables.scss';
+
+.projects-body {
+    padding: 30px;
+    text-align: center;
+
+    h2 {
+        padding: 30px;
+    }
+}
+
+.projects-cards {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+}
+
+.projects-card-container {
+    width: 33%;
+
+    a {
+        color: $text-dark;
+        text-decoration: none;
+    }
+
+    p {
+        padding: 20px 0px 20px 0px;
+    }
+}
+
+.projects-card-separator {
+    padding: 30px;
+}
+
+.projects-card {
+    background-color: $light-grey;
+    border: 1px solid $light-grey;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+    width: 100%;
+}
+
+.projects-card-logo {
+    vertical-align: middle;
+    width: 100%;
+}
+
+.projects-card:hover {
+    box-shadow: -2px 2px 10px $dark-grey;
+}
+
+.polysat {
+    background-color: #212121;
+}
+
+.jupyter {
+    background-color: $white;
+}
+
+.education {
+    background-color: #1a5647;
+}
+
+.fullpower {
+    background-color: $white;
+}

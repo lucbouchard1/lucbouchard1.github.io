@@ -1,14 +1,15 @@
 module.exports = {
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/src/projects`,
+      },
+    },
+    'gatsby-transformer-remark',
     'gatsby-plugin-typescript',
     'gatsby-plugin-sass',
-    {
-       resolve: 'gatsby-source-filesystem',
-       options: {
-          path: '${__dirname}/src/projects',
-          name: 'projects'
-       }
-    }
   ],
   siteMetadata: {
     title: 'Luc Bouchard'

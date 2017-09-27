@@ -31,7 +31,7 @@
     .lb-left {
         text-align: center;
         img {
-            border-radius: 20px;
+            border-radius: 10px;
             height: 300px;
         }
     }
@@ -70,6 +70,9 @@ ul.lb-header-links {
 
 .lb-header-links {
     li {
+        i {
+            color: $text-light;
+        }
         display: inline-block;
         margin-right: 30px;
     }

@@ -1,27 +1,30 @@
 import * as React from "react";
 import {TerminalAnimation} from '../components/terminalanimation';
+import {Projects} from '../components/projects';
+import {GraphQL} from '../graphql';
 import './index.scss';
 let avatar = require('./images/avatar.jpg');
 
 let lines: TerminalAnimation.ILine[] = [
     {prompt: true, lineDelay: 700, type: true, content:  './print_desc.sh'},
-    {prompt: false, lineDelay: 0, type: false, content: 'Hi my name is Luc Bouchard. This is my description.'},
+    {prompt: false, lineDelay: 0, type: false, content: "Welcome to my portfolio! I am a physics ungerdraduate at California Polytechnic \
+     State University pursuing a programming career. Althoug I'm studying physics at Cal Poly, my interests lie strongly in engineering."},
     {prompt: false, lineDelay: 0, type: false, content: ''},
-    {prompt: true, lineDelay: 3000, type: true, content:  'echo "Declan"'},
-    {prompt: false, lineDelay: 0, type: false, content: 'Declan'},
-    {prompt: true, lineDelay: 400, type: true, content:  'ls'},
-    {prompt: false, lineDelay: 0, type: false, content: 'all my directories'},
-    {prompt: true, lineDelay: 400, type: true, content:  'echo "Hello World"'},
-    {prompt: false, lineDelay: 0, type: false, content: 'Hello World'},
-    {prompt: true, lineDelay: 400, type: true, content:  'echo "Hello World"'},
+    {prompt: true, lineDelay: 3000, type: true, content:  'cat interests.txt'},
+    {prompt: false, lineDelay: 0, type: false, content: 'Programming, Physics, Space, and anything cool!'},
+    {prompt: true, lineDelay: 700, type: true, content:  ''},
+    {prompt: true, lineDelay: 100, type: true, content:  ''},
+    {prompt: true, lineDelay: 100, type: true, content:  'ls experience/'},
+    {prompt: false, lineDelay: 0, type: false, content: 'Project Jupyter - An Open-Source Platform for Interactive Computing/'},
+    {prompt: false, lineDelay: 0, type: false, content: 'PolySat - The Cal Poly CubeSat Program/'},
 ]
 
 export default
-class Index extends React.Component<undefined, Index.IState> {
+class Index extends React.Component<Index.IProps, Index.IState> {
 
-    constructor() {
-        super();
-
+    constructor(props: Index.IProps) {
+        super(props);
+        
         this.state = {
             introOpacity: 1,
             introHidden: false,
@@ -65,17 +68,15 @@ class Index extends React.Component<undefined, Index.IState> {
                         </div>
                         <div className='lb-right'>
                             <ul className='lb-header-links'>
-                                <li><i className="fa fa-file-pdf-o fa-4x" aria-hidden="true"></i></li>
-                                <li><i className="fa fa-linkedin-square fa-4x" aria-hidden="true"></i></li>
-                                <li><i className="fa fa-github fa-4x" aria-hidden="true"></i></li>
-                                <li><i className="fa fa-envelope-o fa-4x" aria-hidden="true"></i></li>
+                                <li><a href='https://google.com'><i className="fa fa-file-text-o fa-4x" aria-hidden="true"></i></a></li>
+                                <li><a href='https://google.com'><i className="fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a></li>
+                                <li><a href='https://google.com'><i className="fa fa-github fa-4x" aria-hidden="true"></i></a></li>
+                                <li><a href='https://google.com'><i className="fa fa-envelope-o fa-4x" aria-hidden="true"></i></a></li>
                             </ul>
                         </div>
                     </header>
                     <div style={contentStyle}>
-                        <h1>This is my Portfolio!</h1>
-                        <div style={{height: '2000px'}}></div>
-                        <p>Stuff</p>
+                        <Projects projects={this.props.data.allMarkdownRemark.edges}/>
                     </div>
                 </div>
             </div>
@@ -119,4 +120,33 @@ namespace Index {
         headerHeight: number;
         introHidden: boolean;
     }
+
+    export
+    interface IProps {
+        data: {
+            allMarkdownRemark: {
+                edges: GraphQL.Post[]
+            }
+        }
+    }
 }
+
+
+export const query = graphql`
+    query PostsQuery {
+        allMarkdownRemark {
+            edges {
+                node {
+                    fields {
+                        slug
+                        type
+                        name
+                    }
+                    frontmatter {
+                        title
+                    }
+                }
+            }
+        }
+    }
+`;

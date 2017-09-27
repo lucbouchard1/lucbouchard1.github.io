@@ -20,9 +20,11 @@
     "gatsby-plugin-sass": "^1.0.1",
     "gatsby-plugin-typescript": "^1.0.1",
     "gatsby-source-filesystem": "^1.5.1",
+    "gatsby-transformer-remark": "^1.7.12",
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "fs-extra": "^4.0.2",
     "typescript": "^2.5.2"
   }
 }
