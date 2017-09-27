@@ -3,14 +3,14 @@ read ANSWER
 
 if [ "$ANSWER" != "y" ]; then
    echo "exiting..."
-   exit
+   exit 1
 fi
 
 echo "Deploying..."
 
-git checkout dev
-git branch -D master
-git checkout -b master
+git checkout dev || exit 1
+git branch -D master || exit 1
+git checkout -b master || exit 1
 npm run build
 
 for f in $(ls)
@@ -21,9 +21,9 @@ do
    fi
 done
 
-cp -r public .
+cp -r public/* .
 
-echo "Enter a deployment version: "
+echo -n "Enter a deployment version: "
 read VERSION
 
 git add -A
