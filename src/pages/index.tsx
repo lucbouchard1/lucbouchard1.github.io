@@ -30,9 +30,8 @@ class Index extends React.Component<Index.IProps, Index.IState> {
             introOpacity: 1,
             introHidden: false,
             introHeight: 400,
-            headerHeight: 100
+            headerHeight: 70
         }
-
         this._handleScroll = this._handleScroll.bind(this);
     }
 
