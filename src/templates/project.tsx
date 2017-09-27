@@ -1,13 +1,19 @@
-import * as React from "react"
+import {Header} from '../components/header';
+import * as React from "react";
+import './project.scss';
 
 const ProjectTemplate: React.SFC<any> = ({ data }) => {
   const post = data.markdownRemark
   return (
-    <div>
-      <h1>
-        {post.frontmatter.title}
-      </h1>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+    <div className='lb-project-body'>
+      <Header {...{isFixed: true, height: 100}}/>
+      <div style={{height: 100}}/>
+      <div className='lb-project-content'>
+        <h1>
+          {post.frontmatter.title}
+        </h1>
+        <div className='lb-project-html' dangerouslySetInnerHTML={{ __html: post.html }} />
+      </div>
     </div>
   )
 }

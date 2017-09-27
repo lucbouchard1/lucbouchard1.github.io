@@ -1,6 +1,7 @@
 import * as React from "react";
 import {TerminalAnimation} from '../components/terminalanimation';
 import {Projects} from '../components/projects';
+import {Header} from '../components/header';
 import {GraphQL} from '../graphql';
 import './index.scss';
 let avatar = require('./images/avatar.jpg');
@@ -37,16 +38,16 @@ class Index extends React.Component<Index.IProps, Index.IState> {
 
     render() {
         let introStyle;
-        let headerStyle;
+        let headerProps;
         let contentStyle;
         
         if (this.state.introHidden) {
             contentStyle = {paddingTop: this.state.headerHeight + this.state.introHeight};
-            headerStyle = {position: 'fixed', height: this.state.headerHeight};
+            headerProps = {isFixed: true, height: this.state.headerHeight};
             introStyle = {height: 0};
         } else {
             contentStyle = null;
-            headerStyle = {position: 'static', height: this.state.headerHeight};
+            headerProps = {isFixed: false, height: this.state.headerHeight};
             introStyle = {height: this.state.introHeight};
         }
 
@@ -62,19 +63,7 @@ class Index extends React.Component<Index.IProps, Index.IState> {
                 </div>
                 <div style={introStyle}></div>
                 <div className='lb-content'>
-                    <header className='lb-header lb-grid' style={headerStyle}>
-                        <div className='lb-left'>
-                            <h1>Luc Bouchard</h1>
-                        </div>
-                        <div className='lb-right'>
-                            <ul className='lb-header-links'>
-                                <li><a href='https://google.com'><i className="fa fa-file-text-o fa-4x" aria-hidden="true"></i></a></li>
-                                <li><a href='https://google.com'><i className="fa fa-linkedin-square fa-4x" aria-hidden="true"></i></a></li>
-                                <li><a href='https://google.com'><i className="fa fa-github fa-4x" aria-hidden="true"></i></a></li>
-                                <li><a href='https://google.com'><i className="fa fa-envelope-o fa-4x" aria-hidden="true"></i></a></li>
-                            </ul>
-                        </div>
-                    </header>
+                    <Header {...headerProps}/>
                     <div style={contentStyle}>
                         <Projects projects={this.props.data.allMarkdownRemark.edges}/>
                     </div>

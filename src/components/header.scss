@@ -1,0 +1,37 @@
+@import '../style/variables.scss';
+
+.header {
+    background-color: $primary-color-dark;
+    color: $text-light;
+    width: 100%;
+    align-items: center;
+    display: flex;
+
+    h1 {
+        color: $white;
+    }
+
+    .lb-left {
+        text-align: center;
+    }
+
+    .lb-right {
+        text-align: right;
+    }
+}
+
+ul.header-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-links {
+    li {
+        i {
+            color: $text-light;
+        }
+        display: inline-block;
+        margin-right: 30px;
+    }
+}
