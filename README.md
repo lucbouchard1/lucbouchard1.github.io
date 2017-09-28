@@ -1,5 +1,3 @@
-# using-typescript
+# My Portfolio
 
-https://using-typescript.gatsbyjs.org
-
-Demonstrates using Typescript to build Gatsby sites.
+Built using React, Typescript, and Gatsby.
