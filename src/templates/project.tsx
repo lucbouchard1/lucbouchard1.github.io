@@ -6,8 +6,7 @@ const ProjectTemplate: React.SFC<any> = ({ data }) => {
   const post = data.markdownRemark
   return (
     <div className='lb-project-body'>
-      <Header {...{isFixed: true, height: 100}}/>
-      <div style={{height: 100}}/>
+      <Header {...{isFixed: true}}/>
       <h1 className='lb-project-title'>
         {post.frontmatter.title}
       </h1>

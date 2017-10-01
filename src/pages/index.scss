@@ -4,31 +4,27 @@
     background-color: $primary-color;
     color: $text-light;
     width: 100%;
-}
-
-.lb-grid {
     position: fixed;
     display: flex;
     align-items: center;
 }
 
-.lb-left {
-    padding: 30px;
-    flex: 1;
-}
-
-.lb-right {
-    padding: 30px;
-    flex: 2;
-}
-
 .lb-intro {
     .lb-right,
     .lb-left {
+        padding: 30px;
         height: 330px;
     }
 
+    .lb-right {
+        flex: 2;
+        @media screen and (max-width: $break-tablet) {
+            display: none;
+        }
+    }
+
     .lb-left {
+        flex: 1;
         text-align: center;
         img {
             border-radius: 10px;

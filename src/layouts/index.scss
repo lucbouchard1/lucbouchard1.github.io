@@ -35,10 +35,15 @@ a {
     text-decoration: none;
 }
 
+.lb-body {
+    background-color: $primary-color;
+}
+
 .lb-footer {
     text-align: center;
-    margin-top: 100px;
     padding: 20px;
+    padding-top: 120px;
+    background-color: $white;
 
     p {
         padding: 5px;

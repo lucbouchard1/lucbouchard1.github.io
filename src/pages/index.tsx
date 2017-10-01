@@ -28,9 +28,7 @@ class Index extends React.Component<Index.IProps, Index.IState> {
         
         this.state = {
             introOpacity: 1,
-            introHidden: false,
             introHeight: 400,
-            headerHeight: 70
         }
         this._handleScroll = this._handleScroll.bind(this);
     }
@@ -38,21 +36,10 @@ class Index extends React.Component<Index.IProps, Index.IState> {
     render() {
         let introStyle;
         let headerProps;
-        let contentStyle;
-        
-        if (this.state.introHidden) {
-            contentStyle = {paddingTop: this.state.headerHeight + this.state.introHeight};
-            headerProps = {isFixed: true, height: this.state.headerHeight};
-            introStyle = {height: 0};
-        } else {
-            contentStyle = null;
-            headerProps = {isFixed: false, height: this.state.headerHeight};
-            introStyle = {height: this.state.introHeight};
-        }
 
         return (
             <div>
-                <div className='lb-intro lb-grid' style={introStyle}>
+                <div className='lb-intro' style={introStyle}>
                     <div className='lb-left' style={{opacity: this.state.introOpacity}}>
                         <img src={avatar}></img>
                     </div>
@@ -60,10 +47,10 @@ class Index extends React.Component<Index.IProps, Index.IState> {
                         <TerminalAnimation lines={lines} typeRate={70} prompt={'luc@lb-lap:~'}/>
                     </div>
                 </div>
-                <div style={introStyle}></div>
+                <div style={{height: this.state.introHeight}}></div>
                 <div className='lb-content'>
                     <Header {...headerProps}/>
-                    <div style={contentStyle}>
+                    <div>
                         <Projects projects={this.props.data.allMarkdownRemark.edges}/>
                     </div>
                 </div>
@@ -81,20 +68,11 @@ class Index extends React.Component<Index.IProps, Index.IState> {
     
     private _handleScroll(ev: UIEvent) {
         this.setState((prev) => {
-            let scrollPos = document.body.scrollTop;
-            
-            if ((prev.introHidden && scrollPos == 0) ||
-                (scrollPos <= prev.introHeight)) {
-                return ({
-                    introOpacity:  1 - (scrollPos/prev.introHeight),
-                    introHidden: false
-                });
-            } else {
-                return ({
-                    introOpacity: 0,
-                    introHidden: true
-                });
-            }
+            let opacity = 1 - (document.body.scrollTop / this.state.introHeight);
+            if (opacity < 0) return null;
+            return ({
+                introOpacity:  opacity,
+            });
         });
     }
 }
@@ -105,8 +83,6 @@ namespace Index {
     interface IState {
         introOpacity: number;
         introHeight: number;
-        headerHeight: number;
-        introHidden: boolean;
     }
 
     export

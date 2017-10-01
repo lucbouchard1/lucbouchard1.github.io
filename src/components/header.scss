@@ -7,6 +7,10 @@
     align-items: center;
     display: flex;
     z-index: 5;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    height: 70px;
 
     h1 {
         color: $white;
@@ -14,10 +18,22 @@
 
     .lb-left {
         text-align: center;
+        flex: 1;
     }
 
     .lb-right {
         text-align: right;
+        flex: 2;
+
+        @media screen and (max-width: $break-tablet) {
+            flex: 1;
+        }
+    }
+
+    @media screen and (max-width: $break-phone) {
+        flex-direction: column;
+        justify-content: center;
+        height: 140px;
     }
 }
 

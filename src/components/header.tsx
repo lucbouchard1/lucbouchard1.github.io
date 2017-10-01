@@ -4,14 +4,9 @@ import Link from 'gatsby-link';
 import './header.scss';
 
 export
-let Header: React.SFC<Header.IProps> = (props: Header.IProps) => {
-    let headerStyle = {
-        height: props.height,
-        position: props.isFixed ? 'fixed' : 'static'
-    }
-
+let Header: React.SFC<undefined> = () => {
     return (
-        <header className='header lb-grid' style={headerStyle}>
+        <header className='header'>
             <div className='lb-left'>
                 <Link to='/'><h1 className='header-title'>Luc Bouchard</h1></Link>
             </div>
@@ -25,13 +20,4 @@ let Header: React.SFC<Header.IProps> = (props: Header.IProps) => {
             </div>
         </header>
     );
-}
-
-export
-namespace Header {
-    export
-    interface IProps {
-        height: number;
-        isFixed: boolean;
-    }
 }
