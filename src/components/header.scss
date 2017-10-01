@@ -5,6 +5,7 @@
     color: $text-light;
     width: 100%;
     align-items: center;
+    justify-content: center;
     display: flex;
     z-index: 5;
     position: sticky;
@@ -32,8 +33,12 @@
 
     @media screen and (max-width: $break-phone) {
         flex-direction: column;
-        justify-content: center;
-        height: 140px;
+        height: auto;
+        
+        .lb-left,
+        .lb-right {
+            padding: 10px;
+        }
     }
 }
 
