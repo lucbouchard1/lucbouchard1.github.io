@@ -4,7 +4,7 @@ import {Projects} from '../components/projects';
 import {Header} from '../components/header';
 import {GraphQL} from '../graphql';
 import './index.scss';
-let avatar = require('./images/avatar.jpg');
+let avatar = require('../assets/avatar.jpg');
 
 let lines: TerminalAnimation.ILine[] = [
     {prompt: true, lineDelay: 700, type: true, content:  './print_desc.sh'},
