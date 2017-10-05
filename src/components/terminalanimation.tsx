@@ -1,16 +1,17 @@
-import * as React from "react";
+import * as React from 'react';
 import './terminalanimation.scss';
 
 export
-class TerminalAnimation 
+class TerminalAnimation
 extends React.Component<TerminalAnimation.IProps, TerminalAnimation.IState> {
 
     constructor(props: TerminalAnimation.IProps) {
         super(props);
+
         this.state = {
             currLineIdx: -1,
             currCharIdx: 0,
-        }
+        };
 
         this._addChar = this._addChar.bind(this);
         this._nextLine = this._nextLine.bind(this);
@@ -21,10 +22,12 @@ extends React.Component<TerminalAnimation.IProps, TerminalAnimation.IState> {
     }
 
     componentWillUnmount() {
-        if (this._typeInterval)
+        if (this._typeInterval) {
             clearInterval(this._typeInterval);
-        if (this._lineTimeout)
+        }
+        if (this._lineTimeout) {
             clearTimeout(this._lineTimeout);
+        }
     }
 
     render() {
@@ -33,9 +36,10 @@ extends React.Component<TerminalAnimation.IProps, TerminalAnimation.IState> {
         let charIdx = this.state.currCharIdx;
         let line = lines[lineIdx];
 
-        if (lineIdx < 0)
+        if (lineIdx < 0) {
             return null;
-        
+        }
+
         let prompt = line.prompt ? <span><span className='terminal-prompt'>{this.props.prompt}</span><span>$ </span></span> : null;
 
         return (
@@ -62,7 +66,7 @@ extends React.Component<TerminalAnimation.IProps, TerminalAnimation.IState> {
         let lineIdx = this.state.currLineIdx;
         let charIdx = this.state.currCharIdx;
 
-        if (charIdx == lines[lineIdx].content.length) {
+        if (charIdx === lines[lineIdx].content.length) {
             // Line has been printed out entirely. Setup next line.
             clearInterval(this._typeInterval);
             this._typeInterval = null;
@@ -80,11 +84,12 @@ extends React.Component<TerminalAnimation.IProps, TerminalAnimation.IState> {
         let currLineIdx = this.state.currLineIdx;
         let nextIdx = currLineIdx + 1;
         let lines = this.props.lines;
-        
+
         // Check if we're out of lines
-        if (nextIdx >= lines.length)
+        if (nextIdx >= lines.length) {
             return;
-        
+        }
+
         this.setState({
             currLineIdx: nextIdx,
             currCharIdx: 0
@@ -108,7 +113,7 @@ extends React.Component<TerminalAnimation.IProps, TerminalAnimation.IState> {
         }, lines[nextIdx].lineDelay);
     }
 
-    private _typeInterval: NodeJS.Timer = null;;
+    private _typeInterval: NodeJS.Timer = null;
     private _lineTimeout: NodeJS.Timer = null;
 }
 

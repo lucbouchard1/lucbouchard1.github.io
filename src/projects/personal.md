@@ -13,6 +13,6 @@ Another one of my favorite projects was using a Raspberry Pi to allow remotely c
 
 <br>
 
-![3D Printer](./printer.jpg)
+![3D Printer](./images/printer.jpg)
 
 </div>

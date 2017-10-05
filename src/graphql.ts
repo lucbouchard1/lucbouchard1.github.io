@@ -3,7 +3,7 @@
 export
 namespace GraphQL {
     export
-    interface Post {
+    interface IPost {
         node: {
             frontmatter: {
                 title: string;
@@ -13,7 +13,7 @@ namespace GraphQL {
                 type: string;
                 name: string;
             }
-        }
+        };
 
     }
-}
+};

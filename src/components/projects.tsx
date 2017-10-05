@@ -18,7 +18,7 @@ export
                 </div>
                 <div className='projects-cards'>
                     {
-                        this.props.projects.map((project: GraphQL.Post, idx: number) => {
+                        this.props.projects.map((project: GraphQL.IPost, idx: number) => {
                             return (
                                 <div key={project.node.fields.name} className='projects-card-container'>
                                     <div className='projects-card-separator'>
@@ -43,6 +43,6 @@ export
 namespace Projects {
     export
         interface IProps {
-        projects: GraphQL.Post[];
+        projects: GraphQL.IPost[];
     }
 }

@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import {TerminalAnimation} from '../components/terminalanimation';
 import {Projects} from '../components/projects';
 import {Header} from '../components/header';
@@ -18,18 +18,19 @@ let lines: TerminalAnimation.ILine[] = [
     {prompt: true, lineDelay: 100, type: true, content:  'ls experience/'},
     {prompt: false, lineDelay: 0, type: false, content: 'Project Jupyter - An Open-Source Platform for Interactive Computing/'},
     {prompt: false, lineDelay: 0, type: false, content: 'PolySat - The Cal Poly CubeSat Program/'},
-]
+];
 
 export default
 class Index extends React.Component<Index.IProps, Index.IState> {
 
     constructor(props: Index.IProps) {
         super(props);
-        
+
         this.state = {
             introOpacity: 1,
             introHeight: 400,
-        }
+        };
+
         this._handleScroll = this._handleScroll.bind(this);
     }
 
@@ -57,19 +58,21 @@ class Index extends React.Component<Index.IProps, Index.IState> {
             </div>
         );
     }
-    
+
     componentDidMount() {
-        document.addEventListener('scroll', this._handleScroll)        
+        document.addEventListener('scroll', this._handleScroll);
     }
 
     componentWillUnmount() {
-        document.removeEventListener('scroll', this._handleScroll)        
+        document.removeEventListener('scroll', this._handleScroll);
     }
-    
+
     private _handleScroll(ev: UIEvent) {
         this.setState((prev) => {
             let opacity = 1 - (document.body.scrollTop / this.state.introHeight);
-            if (opacity < 0) return null;
+            if (opacity < 0) {
+                return null;
+            }
             return ({
                 introOpacity:  opacity,
             });
@@ -89,9 +92,9 @@ namespace Index {
     interface IProps {
         data: {
             allMarkdownRemark: {
-                edges: GraphQL.Post[]
-            }
-        }
+                edges: GraphQL.IPost[];
+            };
+        };
     }
 }
 

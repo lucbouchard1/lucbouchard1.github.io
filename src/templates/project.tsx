@@ -1,12 +1,13 @@
 import {Header} from '../components/header';
-import * as React from "react";
+import * as React from 'react';
 import './project.scss';
 
-const ProjectTemplate: React.SFC<any> = ({ data }) => {
-  const post = data.markdownRemark
+export default
+function ProjectTemplate({ data }: any) {
+  const post = data.markdownRemark;
   return (
     <div className='lb-project-body'>
-      <Header {...{isFixed: true}}/>
+      <Header />
       <h1 className='lb-project-title'>
         {post.frontmatter.title}
       </h1>
@@ -14,9 +15,8 @@ const ProjectTemplate: React.SFC<any> = ({ data }) => {
         <div className='lb-project-html' dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </div>
-  )
+  );
 }
-export default ProjectTemplate;
 
 export const query = graphql`
   query BlogPostQuery($slug: String!) {
