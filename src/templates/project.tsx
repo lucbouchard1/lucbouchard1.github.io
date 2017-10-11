@@ -8,9 +8,6 @@ function ProjectTemplate({ data }: any) {
   return (
     <div className='lb-project-body'>
       <Header />
-      <h1 className='lb-project-title'>
-        {post.frontmatter.title}
-      </h1>
       <div className='lb-project-content'>
         <div className='lb-project-html' dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>

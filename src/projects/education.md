@@ -1,20 +1,15 @@
 ---
 title:  "Education"
 ---
+# Education
 
-<br>
+I am currently pursuing a BS in physics with a minor in computer science at Cal Poly, San Luis Obispo. More detail of my education follows.
 
-# Cal Poly
-
-<br>
-
-I'm an currently an undergrad at Cal Poly, San Luis Obispo pursuing a degree in physics with a minor in computer science. I plan to graduate in 2019.
-
-<br>
+## Cal Poly
+Graduation Date: June 2019
 
 GPA: 3.9
 
-<br>
 
 ### Relevant Coursework:
 
@@ -28,29 +23,24 @@ GPA: 3.9
 - MATH 141, 142, 143 - Calculus Series
 - MATH 244, 344 - Linear Algebra and Differential Equations
 
-<br>
 
 ### Awards and Honors:
 
 - Dean's List: All Quarters
 - William L. Frost Scholarship
 
-<br>
 
 ### Extracuricular Activities:
 
 - [Cal Poly Distance Club](http://cpdistanceclub.com/)
 
-<br>
 
-# Pacific Collegiate High School
+## Pacific Collegiate High School
 
-<br>
 
 GPA (Weighted): 4.329  &nbsp; &nbsp; GPA (Unweighted): 3.976
 
 
-<br>
 
 ### Advance Placement Courses:
 
