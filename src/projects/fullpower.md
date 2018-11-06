@@ -3,16 +3,21 @@ title: Fullpower
 priority: 2
 ---
 
-# Fullpower Summer Internship
-
-As a junior and senior in high school, I had the opportunity to be a summer intern at [Fullpower Technologies](https://www.fullpower.com/). Fullpower is a technology company that develops fitness and health products under the MotionX and Sleeptracker brands.
+# Fullpower Firmware Internship
 
 ![Fullpower](./assets/fp-overview.png)
+*<center>Source: Fullpower Technologies</center>*
 
-During my first summer there, I worked on app testing and a web development project. As a junior in high school, I was given fairly little responsibility, but I learned a lot regardless.
+Over the summer of 2018, I worked as a firmware intern at [Fullpower Technologies](https://www.fullpower.com/) in Santa Cruz, CA. I was tasked with improving the bootloader of the product depicted below, the Sleeptracker Monitor, which monitors the heart and breathing rate of a user while they sleep and makes it available through a mobile app. The product runs embedded Linux and boots using [U-Boot](https://www.denx.de/wiki/U-Boot).
 
-The following summer, I worked on developing a new product--a bed that recorded heart and breathing rate while a user slept. Since the timeline for that product was short, the engineers knew me from the previous summer, and stress was high at the company, I was given more responsibility.
+![Fullpower](./assets/sleeptracker.jpg)
+*<center>Source: Fullpower Technologies</center>*
 
-I wrote several data collection and test automation scripts in Python to expedite prototype development. I also wrote a program that started a web server on a BeagleBone Black and served diagnostic information. This made it easy for engineers to determine the state of a prototype by typing its IP address into a web browser.
+Prior to my internship, the Sleeptracker Monitor used an old version of U-Boot provided by the chip manufacturer that lacked flexibility and fault tolerance. Over the summer, I brought the product up to the most recent version of U-Boot and also implemented several features that decreased boot time and improved the product's failure recovery capability. My bootloader is now running on thousands of devices with no issue, and I've only received one email asking for help! :)
 
-Although I did gain great programming experience at Fullpower, I was also able to get a much better understanding of industry. Having this before college became incredibly valuable for projects like PolySat and Jupyter.
+These are the primary features I implemented:
+- Boot into a failsafe OS if main OS is not booting successfully.
+- Allow reflashing both failsafe OS and main OS from the U-Boot command line using TFTP.
+- Reduce reflash time by optimizing SPI flash driver.
+
+This project was incredibly rewarding, as it made a significant impact in the company. However, it did not come without its challenges. The chipset was cheap and poorly documented, the source code for the old bootloader was hacked up and poorly written, and I did not have a practical debugging environment. Thus, there were many slow, painful days of debugging that produced little progress. However, by the end of the summer I had a working bootloader with all requested features that I was proud of.

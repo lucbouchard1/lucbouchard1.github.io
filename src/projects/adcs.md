@@ -1,19 +1,11 @@
 ---
-title:  "PolySat"
+title:  "ADCS"
 priority: 0
 ---
 
-# PolySat: The Cal Poly CubeSat Program
+# Spacecraft Attitude Determination and Control
 
-[PolySat](http://polysat.calpoly.edu) has been a core component of my computer science education since I joined the program as a freshman at Cal Poly. PolySat is Cal Poly's [CubeSat](https://en.wikipedia.org/wiki/CubeSat) program. CubeSats are 10x10x10 cm spacecraft that have risen sharply in popularity over the last 20 years.
-
-PolySat applies an industry-like software architecture that is based on C and Linux. All core programs are Linux processes that utilize our open source event loop and inter-process communication library [libproc](https://github.com/PolySat/libproc).
-
-Dividing functionality into processes enables us to reuse most of our flight software across missions, allowing us to focus on implementing new features instead of reimplementing old ones.
-
-I spent the summer of 2016 working full-time at PolySat, and I've contributed part-time otherwise since starting college.
-
-![Satellite](./assets/dave.jpg)
+`youtube: nKMPYCKfi-g`
 
 *<center>DAVE, a PolySat satellite measuring the damping properties of tungsten powder.</center>*
 

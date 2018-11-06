@@ -8,8 +8,8 @@ let avatar = require('../assets/avatar.jpg');
 
 let lines: TerminalAnimation.ILine[] = [
     {prompt: true, lineDelay: 700, type: true, content:  './print_desc.sh'},
-    {prompt: false, lineDelay: 0, type: false, content: "Welcome to my portfolio! I am a physics ungerdraduate at California Polytechnic \
-     State University pursuing a programming career. Althoug I'm studying physics at Cal Poly, my interests have always been closely linked with engineering."},
+    {prompt: false, lineDelay: 0, type: false, content: "Welcome to my portfolio! I am a physics undergraduate at California Polytechnic \
+     State University pursuing a programming career. Although I'm studying physics at Cal Poly, my interests have always been closely linked with engineering."},
     {prompt: false, lineDelay: 0, type: false, content: ''},
     {prompt: true, lineDelay: 3000, type: true, content:  'cat interests.txt'},
     {prompt: false, lineDelay: 0, type: false, content: 'Programming, physics, space, and other cool things!'},
@@ -17,6 +17,7 @@ let lines: TerminalAnimation.ILine[] = [
     {prompt: true, lineDelay: 100, type: true, content:  ''},
     {prompt: true, lineDelay: 100, type: true, content:  'ls experience/'},
     {prompt: false, lineDelay: 0, type: false, content: 'Project Jupyter - An Open-Source Platform for Interactive Computing/'},
+    {prompt: false, lineDelay: 0, type: false, content: 'Fullpower - An IOT Software Company/'},
     {prompt: false, lineDelay: 0, type: false, content: 'PolySat - The Cal Poly CubeSat Program/'},
 ];
 

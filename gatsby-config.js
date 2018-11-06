@@ -17,6 +17,15 @@ module.exports = {
               maxWidth: 590,
               linkImagesToOriginal: false
             }
+          },
+          {
+            resolve: "gatsby-remark-embed-video",
+            options: {
+              width: "100%",
+              height: 400,
+              related: false,
+              noIframeBorder: true
+            }
           }
         ]
       }
