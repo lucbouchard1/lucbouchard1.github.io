@@ -13,14 +13,11 @@ Dividing functionality into processes enables us to reuse most of our flight sof
 
 I spent the summer of 2016 working full-time at PolySat, and I've contributed part-time otherwise since starting college.
 
-![Satellite](./assets/dave.jpg)
-
-*<center>DAVE, a PolySat satellite measuring the damping properties of tungsten powder.</center>*
-
+![Satellite](./assets/dave_pic.jpg)
 
 ## Software Lead
 
-I am currently the software team lead for this program. In my time in this position, I've learned that it can be quite challenging to manage a team of part-time programmers working on something as sophisticated as a satellite. This combined with the steadily increasing capability and complexity of the PolySat code base has led to several devops improvements. This includes upgrading our antiquated wiki and issue tracking system to [GitLab](https://about.gitlab.com/)--a much more modern software development tool. In addition, I've worked to add tests to software that previously had none. This motivated the addition of CI to our GitLab workflow, creating a much more robust development experience.
+I served at the PolySat software lead from the end of my first year at Cal Poly to the beginning of my fourth year. In my time in this position, I've learned that it can be quite challenging to manage a team of part-time programmers working on something as sophisticated as a satellite. This combined with the steadily increasing capability and complexity of the PolySat code base has led to several devops improvements. This includes upgrading our antiquated wiki and issue tracking system to [GitLab](https://about.gitlab.com/)--a much more modern software development tool. In addition, I've worked to add tests to software that previously had none. This motivated the addition of CI to our GitLab workflow, creating a much more robust development experience.
 
 Another part of my responsibility as software lead is interfacing with the companies we work with. Generally, this involves meeting with the engineers to figure out software requirements and ICD's.
 
@@ -62,7 +59,9 @@ This project also required significant modifications to the PolySat bootloader, 
 
 This was my introduction to Linux kernel programming, and it was a really fun learning experience.
 
-![Satellite](./assets/pps-driver.png)
+
+![Satellite](./assets/dave.jpg)
+*<center>DAVE, a PolySat satellite measuring the damping properties of tungsten powder.</center>*
 
 In 2016, we added a GPS to our system, and we wanted to advantage of the GPS's timing accuracy to synchronize our clock. This was done by tying the GPS's pulse-per-second (PPS) line to one of our interrupts.
 

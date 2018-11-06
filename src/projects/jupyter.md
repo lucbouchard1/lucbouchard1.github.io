@@ -10,16 +10,16 @@ From Spring 2017 to Fall 2017, I worked as an intern with [Project Jupyter](http
 ![JupyterLab Preview](./assets/jupyterpreview.png)
 *<center>The Jupyter Notebook</center>*
 
-This project gave me a lot of experience with web development, which before the summer of 2017 was just something I had played around with.
+This project gave me a lot of experience with web development. Specifically, I learned about the depths of Typescript, React, HTML, CSS, Webpack and Electron.
 
 ## JupyterLab Native
 
-Recently, Project Jupyter has been developing their next generation development environment, [JupyterLab](https://github.com/jupyterlab/jupyterlab). Over the summer of 2017, I worked developing the native version of this app using [electron](https://electron.atom.io/). You can find the github page for the project [here](https://github.com/jupyterlab/jupyterlab_app). 
+JupyterLab Native was my primary project over the summer of 2017. Project Jupyter is currently developing their next generation environment, [JupyterLab](https://github.com/jupyterlab/jupyterlab). I worked on developing the native version of this app using [electron](https://electron.atom.io/). You can find the github page for the project [here](https://github.com/jupyterlab/jupyterlab_app). 
 
 ![JupyterLab Native](./assets/jupyternative.png)
 *<center>The JupyterLab Native Logo</center>*
 
-The native version of JupyterLab takes advantage of native API's to augment to JupyterLab experience. Through this project, I gained a large amount of experience with [Typescript](https://www.typescriptlang.org/), [React](https://reactjs.org/), and other web development technologies.
+The native version of JupyterLab takes advantage of native API's to augment to JupyterLab experience. There were several challenges to overcome in this project. JupyterLab's webpack build was very complex and difficult to port. Furthermore, mapping JupyterLab's API's to native API's was often nontrivial.
 
 ![JupyterLab Native](./assets/jupyterdev.jpg)
 *<center>Working with designers on JupyterLab Native</center>*
