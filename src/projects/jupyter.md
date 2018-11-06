@@ -1,10 +1,11 @@
 ---
 title:  "Project Jupyter"
+priority: 1
 ---
 
 # Project Jupyter
 
-Starting in Spring 2017, I started contributing to [Project Jupyter](https://jupyter.org/), an open source platform for interactive computing. Project Jupyter's most popular project is the Jupyter Notebook, which is pictured below. It runs in the browser, and it is intended primarily for students, data scientists, scientists, and engineers.
+From Spring 2017 to Fall 2017, I worked as an intern with [Project Jupyter](https://jupyter.org/), an open source platform for interactive computing. Project Jupyter's most popular project is the Jupyter Notebook, which is pictured below. It runs in the browser, and it is intended primarily for students, data scientists, scientists, and engineers.
 
 ![JupyterLab Preview](./assets/jupyterpreview.png)
 *<center>The Jupyter Notebook</center>*
@@ -13,7 +14,7 @@ This project gave me a lot of experience with web development, which before the 
 
 ## JupyterLab Native
 
-Recently, Project Jupyter has been developing their next generation development environment, [JupyterLab](https://github.com/jupyterlab/jupyterlab). Starting in the summer of 2017, I've been developing the native version of this app using [electron](https://electron.atom.io/). You can find the github page for the project [here](https://github.com/jupyterlab/jupyterlab_app). 
+Recently, Project Jupyter has been developing their next generation development environment, [JupyterLab](https://github.com/jupyterlab/jupyterlab). Over the summer of 2017, I worked developing the native version of this app using [electron](https://electron.atom.io/). You can find the github page for the project [here](https://github.com/jupyterlab/jupyterlab_app). 
 
 ![JupyterLab Native](./assets/jupyternative.png)
 *<center>The JupyterLab Native Logo</center>*

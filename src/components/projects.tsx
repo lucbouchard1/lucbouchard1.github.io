@@ -18,7 +18,9 @@ export
                 </div>
                 <div className='projects-cards'>
                     {
-                        this.props.projects.map((project: GraphQL.IPost, idx: number) => {
+                        this.props.projects.sort((a: GraphQL.IPost, b: GraphQL.IPost) =>
+                            (a.node.frontmatter.priority - b.node.frontmatter.priority)
+                        ).map((project: GraphQL.IPost, idx: number) => {
                             return (
                                 <div key={project.node.fields.name} className='projects-card-container'>
                                     <div className='projects-card-separator'>

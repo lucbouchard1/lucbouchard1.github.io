@@ -1,5 +1,6 @@
 ---
 title:  "Education"
+priority: 3
 ---
 # Education
 

@@ -7,6 +7,7 @@ namespace GraphQL {
         node: {
             frontmatter: {
                 title: string;
+                priority: number;
             }
             fields: {
                 slug: string;

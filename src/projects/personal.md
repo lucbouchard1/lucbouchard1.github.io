@@ -1,8 +1,6 @@
 ---
-layout: post
 title:  "Personal"
-width:   3
-date:   2015-06-10 11:31:49 +0200
+priority: 5
 ---
 
 # Personal Projects

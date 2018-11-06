@@ -1,7 +1,6 @@
 ---
-layout: post
 title:  "PolySat"
-date:   2016-04-30 11:31:49 +0200
+priority: 0
 ---
 
 # PolySat: The Cal Poly CubeSat Program

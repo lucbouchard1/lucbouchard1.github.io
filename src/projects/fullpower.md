@@ -1,5 +1,6 @@
 ---
 title: Fullpower
+priority: 2
 ---
 
 # Fullpower Summer Internship
