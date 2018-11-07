@@ -61,9 +61,13 @@
         font-weight: bold;
     }
 
-    center {
-        font-size: 13px;
-        max-width: 590px;
-        margin: auto;
-    }
+    p.lb-project-caption {
+      font-style: italic;
+      text-align: center;
+      line-height: 15px;
+      font-size: 13px;
+      max-width: 590px;
+      margin: auto;
+      margin-bottom: 20px;
+   }
 }

@@ -6,12 +6,16 @@ priority: 2
 # Fullpower Firmware Internship
 
 ![Fullpower](./assets/fp-overview.png)
-*<center>Source: Fullpower Technologies</center>*
+<p class='lb-project-caption'>
+Source: Fullpower Technologies
+</p>
 
 Over the summer of 2018, I worked as a firmware intern at [Fullpower Technologies](https://www.fullpower.com/) in Santa Cruz, CA. I was tasked with improving the bootloader of the product depicted below, the Sleeptracker Monitor, which monitors the heart and breathing rate of a user while they sleep and makes the data available through a mobile app. The product runs embedded Linux and boots using [U-Boot](https://www.denx.de/wiki/U-Boot).
 
 ![Fullpower](./assets/sleeptracker.jpg)
-*<center>Source: Fullpower Technologies</center>*
+<p class='lb-project-caption'>
+Source: Fullpower Technologies
+</p>
 
 Prior to my internship, the Sleeptracker Monitor used an old version of U-Boot provided by the chip manufacturer that lacked flexibility and fault tolerance. Over the summer, I brought the product up to the most recent version of U-Boot and also implemented several features that decreased boot time and improved the product's failure recovery capability. My bootloader is now running on thousands of devices with no issue, and I've only received one email asking for help! :)
 

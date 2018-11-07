@@ -1,9 +1,14 @@
 ---
 title:  "PolySat"
-priority: 0
+priority: 1
 ---
 
-# PolySat: The Cal Poly CubeSat Program
+# PolySat: The Cal Poly CubeSat Lab
+
+![Satellite](./assets/dave_pic.jpg)
+<p class='lb-project-caption'>
+Photo from the first satellite I worked on to launch, DAVE
+</p>
 
 [PolySat](http://polysat.calpoly.edu) has been a core component of my computer science education since I joined the program as a freshman at Cal Poly. PolySat is Cal Poly's [CubeSat](https://en.wikipedia.org/wiki/CubeSat) program. CubeSats are 10x10x10 cm spacecraft that have risen sharply in popularity over the last 20 years.
 
@@ -13,7 +18,10 @@ Dividing functionality into processes enables us to reuse most of our flight sof
 
 I spent the summer of 2016 working full-time at PolySat, and I've contributed part-time otherwise since starting college.
 
-![Satellite](./assets/dave_pic.jpg)
+![Satellite](./assets/dave.jpg)
+<p class='lb-project-caption'>
+DAVE, a PolySat satellite measuring the damping properties of tungsten powder.
+</p>
 
 ## Software Lead
 
@@ -36,7 +44,9 @@ Here is a list of satellites that I've directly contributed to:
 <br>
 
 ![PolySat Late](./assets/polysat_late.jpg)
-*<center>Debugging LEO late into the night. I took this photo from the cleanroom computer. Nik (pictured) was operating the hardware while I worked on the software.</center>*
+<p class='lb-project-caption'>
+Debugging LEO late into the night. I took this photo from the cleanroom computer. Nik (pictured) was operating the hardware while I worked on the software.
+</p>
 
 In addition to doing general software support for each mission, I've also completed several long-term projects. Descriptions of those projects follows.
 
@@ -47,7 +57,9 @@ Due to the harsh radiation environment of low earth orbit, and the price of radi
 Recently, the System Board (the PolySat flight computer) needed a redesign due to the obsolescence of some components. This meant a new flash-based memory architecture, and further, a new fault tolerant memory system implemented in software.
 
 ![System Board](./assets/sysboard.jpg)
-*<center>Development setup for the System Board. The System Board is in the bottom right--a single board computer that sits at top of each PolySat satellite.</center>*
+<p class='lb-project-caption'>
+Development setup for the System Board. The System Board is in the bottom right--a single board computer that sits at top of each PolySat satellite.
+</p>
 
 Since flash memory is susceptible to single event effects, I implemented a program in C that regularly computes a hash of all our critical software (the bootloader, Linux kernel, and core filesystem) and compares it to a hash that was computed on the ground. If the hash does not match, it is replaced by a valid copy stored somewhere else in memory.
 
@@ -59,20 +71,18 @@ This project also required significant modifications to the PolySat bootloader, 
 
 This was my introduction to Linux kernel programming, and it was a really fun learning experience.
 
-
-![Satellite](./assets/dave.jpg)
-*<center>DAVE, a PolySat satellite measuring the damping properties of tungsten powder.</center>*
-
 In 2016, we added a GPS to our system, and we wanted to advantage of the GPS's timing accuracy to synchronize our clock. This was done by tying the GPS's pulse-per-second (PPS) line to one of our interrupts.
 
 I wrote a Linux kernel module that recorded the system time whenever an interrupt occurred. The recorded time was then made available to userspace via the read system call, and a program in userspace adjusted the system time accordingly. To learn how to do this, I read through the book [Linux Device Drivers](http://shop.oreilly.com/product/9780596005900.do) and utilized a PolySat faculty advisor.
 
 ![Small Sat](./assets/smallsat.jpg)
-*<center>One of the benefits of being in PolySat--going to the SmallSat conference in Logan, Utah</center>*
+<p class='lb-project-caption'>
+One of the benefits of being in PolySat--going to the SmallSat conference in Logan, Utah
+</p>
 
 ### Northrop Satellite Lead
 
-I am currently the project lead for a 3U satellite PolySat is doing with Northrop Grumman. This entails leading a team of aerospace, electrical, mechanical, and software engineers to design a spacecraft. In addition, I regularly communicate with Northrop employees to manage funding, evaluate requirements, and make design decisions. This satellite is still in the design phase; however, it has an aggressive schedule, hopefully launching sometime in 2018.
+I am currently the project lead for a 3U satellite PolySat is doing with Northrop Grumman. This entails leading a team of aerospace, electrical, mechanical, and software engineers to design a spacecraft. In addition, I regularly communicate with Northrop employees to manage funding, evaluate requirements, and make design decisions. This satellite is still in the design phase.
 
 ![Northrop](./assets/northrop-satellite-lead.png)
 
@@ -88,4 +98,6 @@ This was my first project for PolySat when I joined as a freshman. It consisted 
 Once the software and hardware were working properly, I worked with Aerospace Corp to test the module in their GPS simulator. This was important because our module was a COTS GPS with its CoCom limits disabled, so we had little information on its orbital performance.
 
 ![Small Sat](./assets/lightsail.jpg)
-*<center>A picture from a [LightSail](http://www.planetary.org/explore/projects/lightsail-solar-sailing/) deployment test. We've been working with the Planetary Society on the satellite since the beginning.</center>*
+<p class='lb-project-caption'>
+A picture from a [LightSail](http://www.planetary.org/explore/projects/lightsail-solar-sailing/) deployment test. We've been working with the Planetary Society on the satellite since the beginning.
+</p>

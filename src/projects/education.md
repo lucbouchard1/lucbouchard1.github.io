@@ -9,7 +9,7 @@ I am currently pursuing a BS in physics with a minor in computer science at Cal 
 ## Cal Poly
 Graduation Date: June 2019
 
-GPA: 3.9
+GPA: 3.8
 
 
 ### Relevant Coursework:
@@ -19,10 +19,16 @@ GPA: 3.9
 - CPE 357 - Systems Programming
 - PHYS 141, 132, 133 - Physics Series
 - PHYS 211, 212 - Modern Physics
-- PHYS 302, 303 - Classical Mechanics
+- PHYS 256 - Electronics Lab
 - PHYS 301 - Thermal Physics
+- PHYS 302, 303 - Classical Mechanics
+- PHYS 340. 341 - Quantum Lab
+- PHYS 405, 406 - Quantum Mechanics
+- PHYS 412 - Solid State Physics
 - MATH 141, 142, 143 - Calculus Series
 - MATH 244, 344 - Linear Algebra and Differential Equations
+- MATH 304 - Vector Calculus
+- MATH 418 - Partial Differential Equations
 
 
 ### Awards and Honors:
