@@ -14,7 +14,7 @@ if [ "$(git status -s)" != "" ]; then
 fi
 
 git checkout dev || exit 1
-git branch -D master || exit 1
+git branch -f -D master || exit 1
 git checkout -b master || exit 1
 
 rm -fr .cache/
