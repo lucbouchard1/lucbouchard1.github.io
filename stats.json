@@ -1,0 +1,58 @@
+{
+  "assetsByChunkName": {
+    "path---projects-education": [
+      "path---projects-education-6323fd8424ad387e7af3.js",
+      "path---projects-education-6323fd8424ad387e7af3.js.map"
+    ],
+    "path---projects-fullpower": [
+      "path---projects-fullpower-6816acc78db5ea783f84.js",
+      "path---projects-fullpower-6816acc78db5ea783f84.js.map"
+    ],
+    "component---src-layouts-index-tsx": [
+      "component---src-layouts-index-tsx-6665d6d7f57f7e35339f.js",
+      "component---src-layouts-index-tsx-6665d6d7f57f7e35339f.js.map"
+    ],
+    "path---": [
+      "path----557518bd178906f8d58a.js",
+      "path----557518bd178906f8d58a.js.map"
+    ],
+    "path---projects-personal": [
+      "path---projects-personal-ed5d12555157873e084b.js",
+      "path---projects-personal-ed5d12555157873e084b.js.map"
+    ],
+    "path---projects-polysat": [
+      "path---projects-polysat-b3a29c791c244ef31cae.js",
+      "path---projects-polysat-b3a29c791c244ef31cae.js.map"
+    ],
+    "component---src-templates-project-tsx": [
+      "component---src-templates-project-tsx-649e57b2aa4d23226ef6.js",
+      "component---src-templates-project-tsx-649e57b2aa4d23226ef6.js.map"
+    ],
+    "path---index": [
+      "path---index-e4cafeb21e252100a14c.js",
+      "path---index-e4cafeb21e252100a14c.js.map"
+    ],
+    "path---projects-jupyter": [
+      "path---projects-jupyter-d072807a0d61dc2bb676.js",
+      "path---projects-jupyter-d072807a0d61dc2bb676.js.map"
+    ],
+    "path---projects-adcs": [
+      "path---projects-adcs-54b99f02b06a633916bd.js",
+      "path---projects-adcs-54b99f02b06a633916bd.js.map"
+    ],
+    "commons": [
+      "commons-4d443d40c82ae17f9547.js",
+      "commons-4d443d40c82ae17f9547.js.map"
+    ],
+    "component---src-pages-index-tsx": [
+      "component---src-pages-index-tsx-011e494b30cd8049203a.js",
+      "component---src-pages-index-tsx-011e494b30cd8049203a.js.map"
+    ],
+    "app": [
+      "app-209c9d6d18e063ca36da.js",
+      "build-js-styles.css",
+      "app-209c9d6d18e063ca36da.js.map",
+      "build-js-styles.css.map"
+    ]
+  }
+}
